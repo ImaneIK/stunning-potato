@@ -8,6 +8,7 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { UpdateTodoComponent } from './components/update-todo/update-todo.component';
 import { FormsModule } from '@angular/forms';
 import { FacturesComponent } from './components/factures/factures.component';
+import { PersonnelComponent } from './components/personnel/personnel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FacturesComponent } from './components/factures/factures.component';
     TodoDetailsComponent,
     AddTodoComponent,
     UpdateTodoComponent,
-    FacturesComponent
+    FacturesComponent,
+    PersonnelComponent
   ],
   imports: [
     BrowserModule,

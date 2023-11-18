@@ -6,9 +6,11 @@ import { UpdateTodoComponent } from './components/update-todo/update-todo.compon
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 import { AppComponent } from './app.component';
 import { FacturesComponent } from './components/factures/factures.component';
+import { PersonnelComponent } from './components/personnel/personnel.component';
 
 const routes: Routes = [
   {path:'', component:FacturesComponent},
+  {path:'personnel', component:PersonnelComponent},
   {path:'add-todo',component:TodoListComponent},
   {path:'update',component:UpdateTodoComponent},
   {path:'todo-details',component:TodoDetailsComponent},
