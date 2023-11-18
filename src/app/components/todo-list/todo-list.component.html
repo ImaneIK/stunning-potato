@@ -1,0 +1,29 @@
+<app-add-todo [tasks]="tasks"></app-add-todo>
+<div class="container" style="margin-top: 20vh;">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">task</th>
+            <th scope="col">status</th>
+            <th scope="col">action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks">
+            <th scope="row">{{task.id}}</th>
+            <td>{{task.title}}</td>
+            <td>{{task.status}}</td>
+            <td style="display: flex; gap:1vw;">
+                <!-- <div class="btn btn-primary">View</div> -->
+                <a class="btn btn-success" href="#update">Edit</a>
+                <div (click)="deleteTask(task.id)" class="btn btn-danger">Delete</div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+
+<app-update-todo [tasks]="tasks" id="update"></app-update-todo>

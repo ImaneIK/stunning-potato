@@ -1,0 +1,33 @@
+<div class="container" style="margin-top:20vh;">
+    <h3>Choisir une facture a suprimer</h3>
+  
+    <form #myForm="ngForm" >
+  
+          <div class="mb-3">
+              <label for="taskName" class="form-label">Facture id</label>
+              <input type="text" class="form-control" id="factureid"  name="factureid">
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Submit</button>
+  
+        </form>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">date</th>
+            <th scope="col">montant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let facture of factures">
+            <th scope="row">{{facture.id}}</th>
+            <td>{{facture.datefacture}}</td>
+            <td>{{facture.montant}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
